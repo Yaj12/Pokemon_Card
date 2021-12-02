@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .container
+    .card
+      .card-row.header
+        p.name  Pikachu
+        p.healthpoints  50 HP
+        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg' )
+      img.pokemon-img(src='https://cdn.shoplightspeed.com/shops/633327/files/29258343/ftla-art-kit-painting-acrylic-pikachu.jpg')
+      .card-row.move-row.first
+        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg' )
+        p.move-name  Gnaw
+        p.damage  10
+      .card-row.move-row.second
+        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
+        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
+        p.move-name  Lightning Bolt
+        p.damage  50
+      .card-row.description-row
+        p weakness
+        p resistance
+        p retreat cost
+      .card-row.description-type-row
+        .weakness.type-row
+          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
+        .resistance.type-row
+          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
+        .retreat-cost.type-row
+          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
+          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
