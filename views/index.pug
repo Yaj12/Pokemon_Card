@@ -2,30 +2,35 @@ extends layout
 
 block content
   .container
-    .card
-      .card-row.header
-        p.name  Pikachu
-        p.healthpoints  50 HP
-        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg' )
-      img.pokemon-img(src='https://cdn.shoplightspeed.com/shops/633327/files/29258343/ftla-art-kit-painting-acrylic-pikachu.jpg')
-      .card-row.move-row.first
-        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg' )
-        p.move-name  Gnaw
-        p.damage  10
-      .card-row.move-row.second
-        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
-        img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
-        p.move-name  Lightning Bolt
-        p.damage  50
-      .card-row.description-row
-        p weakness
-        p resistance
-        p retreat cost
-      .card-row.description-type-row
-        .weakness.type-row
-          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
-        .resistance.type-row
-          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
-        .retreat-cost.type-row
-          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
-          img.type(src='http://pm1.narvii.com/5867/6c6a05dde0693c1dfe454912c83109f165f3f7ab_00.jpg')
+    each card in cards
+      div(class=`card ${card.pokemonName}`)
+        .card-row.header
+          p.name=card.pokemonName
+          p.healthpoints=card.pokemonHealth
+          img.type(src=card.pokemonType)
+        img.pokemon-img(src=card.pokemonImage)
+        .card-row.move-row.first
+          -for (let i = 0; i < card.moveOneAmount; i++)
+            img.type(src=card.moveOneImage)
+
+          p.move-name=card.moveOne
+          p.damage=card.moveOneDamage
+        .card-row.move-row.second
+          -for (let i = 0; i < card.moveTwoAmount; i++)
+            img.type(src=card.moveTwoImage)
+
+          p.move-name=card.moveTwo
+          p.damage=card.moveTwoDamage
+        .card-row.description-row
+          p weakness
+          p resistance
+          p retreat cost
+        .card-row.description-type-row
+          .weakness.type-row
+            img.type(src=card.weaknessImage)
+          .resistance.type-row
+            img.type(src=card.resistanceImage)
+          .retreat-cost.type-row
+            - for(let i = 0; i<card.retreatCostAmount; i++)
+            img.type(src=card.retreatCostImage)
+
