@@ -29,6 +29,12 @@ body {
           rgba(0,0,0,0.06) 0 1px 2px 0
 }
 
+.Pikachu {
+  background-color: #F5E993;
+}
+.Charizard {
+  background-color: #e59534;
+}
 .card-row {
   display: flex;
   flex-direction: row;
