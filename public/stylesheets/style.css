@@ -29,18 +29,34 @@ body {
           rgba(0,0,0,0.06) 0 1px 2px 0
 }
 
-.Pikachu {
+.Electric{
   background-color: #F5E993;
 }
-.Charizard {
-  background-color: #e59534;
+.Water {
+  background-color: #6eb4e6;
 }
-.Blastoise {
-  background-color: #e59534;
+.Ground {
+  background-color: #e29449;
 }
-.Lapras {
-  background-color: #e59534;
+.Rock {
+  background-color: #eea537;
 }
+.Grass {
+  background-color: #93c98a;
+}
+.Poison {
+  background-color: #bc83ba;
+}
+.Fighting {
+  background-color: #fd7448;
+}
+.Dragon {
+  background-color: #e7e1df;
+}
+.Fire {
+  background-color: #ebaf7d;
+}
+
 .card-row {
   display: flex;
   flex-direction: row;
